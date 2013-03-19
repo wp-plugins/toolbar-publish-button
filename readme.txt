@@ -7,13 +7,13 @@ Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an copy of Update / Publish / Submit for Review / Save Changes button to the top Toolbar. You are no longer in need to scroll your admin page back and forth to edit and save any type of your posts, taxonomies, users or settings.
+Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer need to scroll an admin pages up and down to save posts and settings.
 
 
 
 == Description ==
 
-Too often it turns out very inconvenient to scroll WordPress admin page up and down in the quest for a big blue button in order to save latest changes. 
+Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button in order to save latest changes. 
 
 Simple jQuery script of this plugin will duplicate Update / Publish button for posts, pages, taxonomies, user profiles and settings to the top WordPress Toolbar, so that it is staying on the site when you are scrolling your admin page. 
 
