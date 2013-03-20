@@ -3,7 +3,7 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, publish button, toolbar button, no scroll, easy saving, save changes
 Requires at least: 3.0.0
 Tested up to: 3.5.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ There are no questions for now :)
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Minor improvements.
 
 = 1.0.2 =
 * ACF plugin Option Page button support added.
