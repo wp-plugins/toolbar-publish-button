@@ -1,6 +1,6 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, admin, publish button, toolbar button, no scroll, easy saving, save changes
+Tags: ux, user experience, wp-admin, publish button, toolbar button, no scroll, easy saving, save changes
 Requires at least: 3.0.0
 Tested up to: 3.5.1
 Stable tag: 1.0.2
@@ -24,7 +24,9 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 == Installation ==
 
 1. Upload 'toolbar-publish-button' to the '/wp-content/plugins/' directory
+
 2. Activate the plugin through the 'Plugins' menu in WordPress admin
+
 3. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
 
 
@@ -36,7 +38,7 @@ There are no questions for now :)
 
 == Changelog ==
 
->= 1.0.2 =
+= 1.0.2 =
 * ACF plugin Option Page button support added.
 
 = 1.0.1 =
