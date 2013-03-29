@@ -1,13 +1,13 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, publish button, toolbar button, no scroll, easy saving, save changes
-Requires at least: 3.0.0
+Tags: ux, user experience, wp-admin, publish, toolbar, save, button
+Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer need to scroll an admin pages up and down to save posts and settings.
+Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer need to scroll admin pages up and down to save posts and settings.
 
 
 
@@ -37,6 +37,9 @@ There are no questions for now :)
 
 
 == Changelog ==
+
+= 1.0.4 =
+* Scrips moved to footer for better site performance.
 
 = 1.0.3 =
 * Minor improvements.

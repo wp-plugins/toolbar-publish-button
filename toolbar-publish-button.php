@@ -2,8 +2,8 @@
 /*
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
-Description: Get a copy of Update / Publish / Submit for Review / Save Changes button to the top Toolbar! There is no longer need to scroll an admin pages up and down to edit and save any type of your posts, taxonomies, users or settings.
-Version: 1.0.3
+Description: Get a copy of Update / Publish / Submit for Review / Save Changes button to the top Toolbar! There is no longer need to scroll admin pages up and down to edit and save any type of your posts, taxonomies, users or settings.
+Version: 1.0.4
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -18,7 +18,9 @@ function wpuxss_tpb_admin_scripts()
 		wp_enqueue_script(
 			'toolbar-publish-button',
 			plugins_url( '/tpb.js' , __FILE__ ),
-			array('jquery')
+			array('jquery'),
+			null,
+			true
 		);
 	}
 }
