@@ -39,7 +39,7 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.0.4 =
-* Scrips moved to footer for better site performance.
+* Script moved to the footer for better site performance.
 
 = 1.0.3 =
 * Minor improvements.
