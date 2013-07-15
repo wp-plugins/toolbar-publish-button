@@ -210,7 +210,7 @@ function wpuxss_tpb_on_activation()
 	$wpuxss_tpb_settings = array(
 		'wpuxss_tpb_scrollbar_return' => 1
 	);
-	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
+	add_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
 }
 
 
