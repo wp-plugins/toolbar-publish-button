@@ -1,9 +1,9 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, publish, toolbar, save, button
+Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, scrollbar
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 1.0.4
+Tested up to: 3.5.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,9 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 2. Activate the plugin through the 'Plugins' menu in WordPress admin
 
-3. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
+3. Change "Remember scrollbar position" option on the plugin Options page if you wish
+
+4. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
 
 
 == Frequently Asked Questions ==
@@ -36,7 +38,16 @@ There are no questions for now :)
 
 
 
+== Screenshots ==
+
+1. Toolbar Publish Button Options Page
+
+
+
 == Changelog ==
+
+= 1.1.0 =
+* Remember scrollbar position option added
 
 = 1.0.4 =
 * Script moved to the footer for better site performance.
