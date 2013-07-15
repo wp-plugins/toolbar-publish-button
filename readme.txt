@@ -42,6 +42,8 @@ There are no questions for now :)
 
 1. Toolbar Publish Button Options Page
 
+2. When the Publish Button can be helpful
+
 
 
 == Changelog ==
