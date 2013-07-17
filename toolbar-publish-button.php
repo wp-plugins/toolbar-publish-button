@@ -27,8 +27,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-$version = "1.1.1";
-$old_version = get_option('wpuxss_tpb_version', false);
+$wpuxss_tpb_version = "1.1.1";
+$wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 
 /**
@@ -52,13 +52,13 @@ add_action( 'admin_init', 'wpuxss_tpb_admin_scripts' );
 function wpuxss_tpb_admin_scripts() 
 {	
 	// update actions
-	global $version, $old_version;
+	global $wpuxss_tpb_version, $wpuxss_tpb_old_version;
 
-	if( $version != $old_version )
+	if( $wpuxss_tpb_version != $wpuxss_tpb_old_version )
 	{
-		update_option('wpuxss_tpb_version', $version );
+		update_option('wpuxss_tpb_version', $wpuxss_tpb_version );
 		
-		if (!$old_version) 
+		if (!$wpuxss_tpb_old_version) 
 		{
 			wpuxss_tpb_on_activation();
 		}
@@ -159,7 +159,7 @@ function wpuxss_tpb_admin_menu()
 
 function wpuxss_tpb_print_options() 
 {
-	global $version;
+	global $wpuxss_tpb_version;
 	?>  
     
 	<div id="toolbar-publish-button-settings-wrap" class="wrap">    
@@ -202,12 +202,12 @@ function wpuxss_tpb_print_options()
                 <div id="postbox-container-1" class="postbox-container">
                     <div class="postbox">
                         
-                        <h3>Toolbar Publish Button <?php echo $version; ?></h3>
+                        <h3>Toolbar Publish Button <?php echo $wpuxss_tpb_version; ?></h3>
                         
                         <div class="inside">
                         
                             <h4>Changelog</h4>
-                            <p>What's new in <a href="http://wordpress.org/plugins/toolbar-publish-button/changelog/">version <?php echo $version; ?></a>.</p>
+                            <p>What's new in <a href="http://wordpress.org/plugins/toolbar-publish-button/changelog/">version <?php echo $wpuxss_tpb_version; ?></a>.</p>
                             
                             <h4>Support</h4>
                             <p>Feel free to ask for support on the <a href="http://wordpress.org/support/plugin/toolbar-publish-button/">wordpress.org</a> or on the <a href="http://wordpressuxsolutions.com/support/">plugin website</a>.</p>
