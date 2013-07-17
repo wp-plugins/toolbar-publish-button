@@ -54,7 +54,7 @@ function wpuxss_tpb_admin_scripts()
 	// update actions
 	if( $version != $old_version )
 	{
-		update_option('wpuxss_tpb_version', $new_version );
+		update_option('wpuxss_tpb_version', $version );
 		
 		if (!$old_version) 
 		{
