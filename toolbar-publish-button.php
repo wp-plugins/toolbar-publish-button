@@ -56,7 +56,7 @@ function wpuxss_tpb_admin_scripts()
 	{
 		update_option('wpuxss_tpb_version', $version );
 		
-		if (!$old_version || $old_version < '1.1.0') 
+		if (!$old_version) 
 		{
 			wpuxss_tpb_on_activation();
 		}
