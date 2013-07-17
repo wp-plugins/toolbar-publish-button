@@ -1,6 +1,6 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, scrollbar
+Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, scrollbar, scrolling
 Requires at least: 3.0
 Tested up to: 3.5.2
 Stable tag: 1.1.0
@@ -47,6 +47,9 @@ There are no questions for now :)
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Minor improvement of plugin upgrade process
 
 = 1.1.0 =
 * Remember scrollbar position option added

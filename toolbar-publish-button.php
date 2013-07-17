@@ -3,7 +3,7 @@
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
 Description: Get a copy of Update / Publish / Submit for Review / Save Changes button to the top Toolbar! There is no longer need to scroll admin pages up and down to edit and save any type of your posts, taxonomies, users or settings.
-Version: 1.1.0
+Version: 1.1.1
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -27,14 +27,41 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
+$version = "1.1.1";
+$old_version = get_option('wpuxss_tpb_version', false);
+
+
+/**
+ *  Load plugin text domain
+ *
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */
 
 load_plugin_textdomain('toolbar-publish-button', false, basename( dirname( __FILE__ ) ) . '/languages' );
 
 
-
+/**
+ *  wpuxss_tpb_admin_scripts
+ *
+ *  @since		1.0.2
+ *  @created	30/03/13
+ */
+ 
 add_action( 'admin_init', 'wpuxss_tpb_admin_scripts' );
 function wpuxss_tpb_admin_scripts() 
 {	
+	// update actions
+	if( $version != $old_version )
+	{
+		update_option('wpuxss_tpb_version', $new_version );
+		
+		if (!$old_version) 
+		{
+			wpuxss_tpb_on_activation();
+		}
+	}
+	
 	// styles for button
 	wp_register_style( 
 		'wb-admin-custom-style', 
@@ -96,8 +123,15 @@ function wpuxss_tpb_admin_scripts()
 }
 
 
+/**
+ *  wpuxss_tpb_admin_menu
+ *
+ *  Add plugin settings page
+ *
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */
 
-// add plugin settings page
 add_action('admin_menu', 'wpuxss_tpb_admin_menu');
 function wpuxss_tpb_admin_menu() 
 {
@@ -111,8 +145,16 @@ function wpuxss_tpb_admin_menu()
 }
 
 
+/**
+ *  wpuxss_tpb_print_options
+ *
+ *  Print plugin options page
+ *
+ *  @type		callback function
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */
 
-// callback :: print plugin options page
 function wpuxss_tpb_print_options() 
 {
 	?>  
@@ -189,8 +231,14 @@ function wpuxss_tpb_print_options()
 }
 
 
-
-// callback :: validate plugin settings
+/**
+ *  wpuxss_tpb_settings_validate
+ *
+ *  @type		callback function
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */ 
+ 
 function wpuxss_tpb_settings_validate($input)
 {
 	if(isset($input['wpuxss_tpb_scrollbar_return']))
@@ -202,8 +250,15 @@ function wpuxss_tpb_settings_validate($input)
 }
 
 
+/**
+ *  wpuxss_tpb_on_activation
+ *
+ *  Set default value for plugin setting during plugin activation
+ *
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */ 
 
-// set default value for plugin setting during plugin activation
 register_activation_hook(  __FILE__, 'wpuxss_tpb_on_activation' );
 function wpuxss_tpb_on_activation() 
 {
@@ -214,8 +269,15 @@ function wpuxss_tpb_on_activation()
 }
 
 
-
-// add settings link in plugin management screen
+/**
+ *  wpuxss_tpb_settings_links
+ *
+ *  Add settings link to the plugin action links
+ *
+ *  @since		1.1.0
+ *  @created	15/07/13
+ */ 
+ 
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'wpuxss_tpb_settings_links' );
 function wpuxss_tpb_settings_links( $links ) 
 {
