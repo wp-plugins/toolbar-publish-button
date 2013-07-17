@@ -3,7 +3,7 @@
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
 Description: Get a copy of Update / Publish / Submit for Review / Save Changes button to the top Toolbar! There is no longer need to scroll admin pages up and down to edit and save any type of your posts, taxonomies, users or settings.
-Version: 1.1.1
+Version: 1.1.2
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -27,7 +27,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-$wpuxss_tpb_version = "1.1.1";
+$wpuxss_tpb_version = "1.1.2";
 $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 
@@ -101,7 +101,7 @@ function wpuxss_tpb_admin_scripts()
 	// add section to plugin settings page
 	add_settings_section(
 		'wpuxss_tpb_main_section', //ID 
-		__('Basic Settings'), //title 
+		__('Basic Settings','toolbar-publish-button'), //title 
 		'', //callback
 		'toolbar-publish-button-settings' //page
 	);	
@@ -109,7 +109,7 @@ function wpuxss_tpb_admin_scripts()
 	// add setting field to the section on the plugin settings page
 	add_settings_field(
 		'wpuxss_tpb_scrollbar_return', //ID 
-		__('Remember scrollbar position'), //title 
+		__('Remember scrollbar position','toolbar-publish-button'), //title 
 		'', //callback
 		'toolbar-publish-button-settings', //page
 		'wpuxss_tpb_main_section' //section			
@@ -164,7 +164,7 @@ function wpuxss_tpb_print_options()
     
 	<div id="toolbar-publish-button-settings-wrap" class="wrap">    
     	<?php screen_icon(); ?>
-        <h2>Toolbar Publish Button Settings</h2>   
+        <h2><?php _e('Toolbar Publish Button Settings','toolbar-publish-button'); ?></h2>   
         
         <div id="poststuff">
         	<div id="post-body" class="metabox-holder columns-2">
@@ -174,7 +174,7 @@ function wpuxss_tpb_print_options()
                         <form method="post" action="options.php">
                             <?php settings_fields( 'wpuxss_tpb_settings' ); ?>
                             
-                            <h3>Basic Settings</h3>
+                            <h3><?php _e('Basic Settings','toolbar-publish-button'); ?></h3>
                             
                             <div class="inside">
                             
@@ -184,8 +184,8 @@ function wpuxss_tpb_print_options()
                                         <?php $options = get_option('wpuxss_tpb_settings'); ?>
                                         <input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_scrollbar_return]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_scrollbar_return'] ); ?> />
                                         <label>
-                                            Remember scrollbar position<br />
-                                            <span>It will return admin page scroll bar to the position that preceded the click of the Save/Update button</span>
+                                            <?php _e('Remember scrollbar position','toolbar-publish-button'); ?><br />
+                                            <span><?php _e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button','toolbar-publish-button'); ?></span>
                                         </label>
                                     </li>
                                     
@@ -216,7 +216,7 @@ function wpuxss_tpb_print_options()
                             <p>Please <a href="http://wordpress.org/support/view/plugin-reviews/toolbar-publish-button/">vote for the plugin</a>. Thanks!</p>
                             
                             <div class="author">
-                                <span><a href="http://wordpressuxsolutions.com/" target="_blank">WordPress UX Solutions</a> by <a class="logo-webbistro" href="http://twitter.com/webbistro" target="_blank"><span class="icon-webbistro">@</span>webbistro</a></span>
+                                <span><a href="http://wordpressuxsolutions.com/">WordPress UX Solutions</a> by <a class="logo-webbistro" href="http://twitter.com/webbistro"><span class="icon-webbistro">@</span>webbistro</a></span>
                             </div>
                         
                         </div>
@@ -286,7 +286,7 @@ function wpuxss_tpb_settings_links( $links )
 {
 	return array_merge(
 		array(
-			'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/options-general.php?page=toolbar-publish-button-settings">Settings</a>'
+			'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/options-general.php?page=toolbar-publish-button-settings">' . __('Settings') . '</a>'
 		),
 		$links
 	);
