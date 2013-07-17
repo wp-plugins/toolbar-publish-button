@@ -27,9 +27,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-$version = "1.1.1";
-$old_version = get_option('wpuxss_tpb_version', false);
-
 
 /**
  *  Load plugin text domain
@@ -52,6 +49,9 @@ add_action( 'admin_init', 'wpuxss_tpb_admin_scripts' );
 function wpuxss_tpb_admin_scripts() 
 {	
 	// update actions
+	$version = "1.1.1";
+	$old_version = get_option('wpuxss_tpb_version', false);
+
 	if( $version != $old_version )
 	{
 		update_option('wpuxss_tpb_version', $version );
