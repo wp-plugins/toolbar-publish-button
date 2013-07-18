@@ -27,7 +27,7 @@
 
 		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
 		{		
-			if (wpuxss_tpb_scrollbar_return == 1)
+			if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1)
 			{
 				$.cookie("TPBScrollTop", $(window).scrollTop());
 				$.cookie("TPBmessageDiv", $('div#message').length);
@@ -39,12 +39,9 @@
 		});		
 	});
 	
-	
 	$(window).load(function() 
-	{
-		var wpuxss_tpb_scrollbar_return = wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return;
-		
-		if (wpuxss_tpb_scrollbar_return == 1) 
+	{		
+		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
 		{
 			var tempScrollTop = $.cookie("TPBScrollTop");
 			
