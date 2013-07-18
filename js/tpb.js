@@ -29,7 +29,7 @@
 			var tempScrollTop = $.cookie("TPBScrollTop");
 			if (tempScrollTop) 
 			{
-				$(window).scrollTop(parseInt(tempScrollTop));
+				$("body").scrollTop(parseInt(tempScrollTop));
 				$.cookie("TPBScrollTop",null);
 			}
 		}
@@ -38,7 +38,7 @@
 		
 		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
 		{		
-			if (wpuxss_tpb_scrollbar_return == 1) $.cookie("TPBScrollTop", $(window).scrollTop());
+			if (wpuxss_tpb_scrollbar_return == 1) $.cookie("TPBScrollTop", $("body").scrollTop());
 			
 			e.preventDefault();
 			$('#'+$(this).attr('for')).click();
