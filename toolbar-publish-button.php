@@ -34,7 +34,7 @@ $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 /**
  *  Load plugin text domain
  *
- *  @since		1.1.0
+ *  @since	1.1.0
  *  @created	15/07/13
  */
 
@@ -44,7 +44,7 @@ load_plugin_textdomain('toolbar-publish-button', false, basename( dirname( __FIL
 /**
  *  wpuxss_tpb_admin_scripts
  *
- *  @since		1.0.2
+ *  @since	1.0.2
  *  @created	30/03/13
  */
  
@@ -130,7 +130,7 @@ function wpuxss_tpb_admin_scripts()
  *
  *  Add plugin settings page
  *
- *  @since		1.1.0
+ *  @since	1.1.0
  *  @created	15/07/13
  */
 
@@ -152,8 +152,8 @@ function wpuxss_tpb_admin_menu()
  *
  *  Print plugin options page
  *
- *  @type		callback function
- *  @since		1.1.0
+ *  @type	callback function
+ *  @since	1.1.0
  *  @created	15/07/13
  */
 
@@ -237,8 +237,8 @@ function wpuxss_tpb_print_options()
 /**
  *  wpuxss_tpb_settings_validate
  *
- *  @type		callback function
- *  @since		1.1.0
+ *  @type	callback function
+ *  @since	1.1.0
  *  @created	15/07/13
  */ 
  
@@ -258,7 +258,7 @@ function wpuxss_tpb_settings_validate($input)
  *
  *  Set default value for plugin setting during plugin activation
  *
- *  @since		1.1.0
+ *  @since	1.1.0
  *  @created	15/07/13
  */ 
 
@@ -277,7 +277,7 @@ function wpuxss_tpb_on_activation()
  *
  *  Add settings link to the plugin action links
  *
- *  @since		1.1.0
+ *  @since	1.1.0
  *  @created	15/07/13
  */ 
  
