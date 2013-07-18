@@ -49,7 +49,8 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.2 =
-* Implementation of the plugin admin texts localization. (Note: Front-end doesn't need this because it uses the text of a button via javascript)
+* Scrollbar inaccurate position fixed
+* The plugin admin texts localization mechanism implemented. (Note: Front-end doesn't need this because it uses the text of a button via javascript)
 
 = 1.1.1 =
 * Minor improvement of plugin upgrade process
