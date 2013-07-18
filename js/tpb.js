@@ -29,7 +29,7 @@
 			var tempScrollTop = $.cookie("TPBScrollTop");
 			if (tempScrollTop) 
 			{
-				$(window).scrollTop(tempScrollTop);
+				$(window).scrollTop(parseInt(tempScrollTop));
 				$.cookie("TPBScrollTop",null);
 			}
 		}
