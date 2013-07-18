@@ -3,7 +3,7 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend
 Requires at least: 3.0
 Tested up to: 3.5.2
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -50,7 +50,7 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.2 =
-* Scrollbar inaccurate position calculation fixed
+* Inaccurate scrollbar position calculation fixed
 * The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript)
 
 = 1.1.1 =
