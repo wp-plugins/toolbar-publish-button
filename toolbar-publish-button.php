@@ -286,7 +286,7 @@ function wpuxss_tpb_settings_links( $links )
 {
 	return array_merge(
 		array(
-			'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/options-general.php?page=toolbar-publish-button-settings">' . __('Settings') . '</a>'
+			'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/options-general.php?page=toolbar-publish-button-settings">' . __('Settings','toolbar-publish-button') . '</a>'
 		),
 		$links
 	);

@@ -1,13 +1,14 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, scrollbar, scrolling
+Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend
 Requires at least: 3.0
 Tested up to: 3.5.2
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer need to scroll admin pages up and down to save posts and settings.
+
+Get rid of excessive scrolling when saving data on the WordPress backend! A small UX improvement will always keep Publish Button in sight.
 
 
 
@@ -15,7 +16,7 @@ Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer 
 
 Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button in order to save latest changes. 
 
-Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, taxonomies, user profiles and settings to the top WordPress Toolbar, so that it is staying on the site when you are scrolling your admin page. 
+Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar menu so, that it is staying on the site when you are scrolling your admin page. 
 
 The plugin doesn't affect any native WordPress functionality. It just redirects your click to an original button. The plugin, also, uses current button text, of course with the current language.
 
@@ -49,8 +50,8 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.2 =
-* Scrollbar inaccurate position fixed
-* The plugin admin texts localization mechanism implemented. (Note: Front-end doesn't need this because it uses the text of a button via javascript)
+* Scrollbar inaccurate position calculation fixed
+* The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript)
 
 = 1.1.1 =
 * Minor improvement of plugin upgrade process

@@ -27,10 +27,20 @@
 		if (wpuxss_tpb_scrollbar_return == 1) 
 		{
 			var tempScrollTop = $.cookie("TPBScrollTop");
+			
 			if (tempScrollTop) 
 			{
-				$("body").scrollTop(parseInt(tempScrollTop));
+				var prevMessageDiv = parseInt($.cookie("TPBmessageDiv"));
+				var currMessageDiv = parseInt($('div#message').length);		
+			
+				if (!prevMessageDiv && currMessageDiv)
+				{
+					tempScrollTop = parseInt(tempScrollTop) + $('div#message').outerHeight(true);
+				}
+				
+				$(window).scrollTop(tempScrollTop);
 				$.cookie("TPBScrollTop",null);
+				$.cookie("TPBmessageDiv",null);
 			}
 		}
 		
@@ -38,7 +48,11 @@
 		
 		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
 		{		
-			if (wpuxss_tpb_scrollbar_return == 1) $.cookie("TPBScrollTop", $("body").scrollTop());
+			if (wpuxss_tpb_scrollbar_return == 1) 
+			{
+				$.cookie("TPBScrollTop", $(window).scrollTop());
+				$.cookie("TPBmessageDiv", $('div#message').length);
+			}
 			
 			e.preventDefault();
 			$('#'+$(this).attr('for')).click();
