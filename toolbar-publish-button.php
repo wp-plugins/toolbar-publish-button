@@ -217,7 +217,7 @@ function wpuxss_tpb_print_options()
 							<h4>Support</h4>
 							<p>Feel free to ask for support on the <a href="http://wordpress.org/support/plugin/toolbar-publish-button/">wordpress.org</a> or on the <a href="http://wordpressuxsolutions.com/support/">plugin website</a>.</p>
 							
-							<h4>Plugin raiting</h4>
+							<h4>Plugin rating</h4>
 							<p>Please <a href="http://wordpress.org/support/view/plugin-reviews/toolbar-publish-button/">vote for the plugin</a>. Thanks!</p>
                             
 							<div class="author">
