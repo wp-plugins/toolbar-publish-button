@@ -1,7 +1,7 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
 Tags: ux, user experience, wp-admin, publish button, toolbar button, no scroll, easy saving, save changes
-Requires at least: 3.0
+Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: 1.0.2
 License: GPLv2 or later
