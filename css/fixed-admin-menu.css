@@ -4,9 +4,9 @@
 
 #adminmenuwrap {
 	position: fixed;
-	z-index: 200000000;
+	z-index: 20;
 }
 #wpcontent {
 	position: relative;
-	z-index: 100000000;
+	z-index: 10;
 }

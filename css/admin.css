@@ -59,10 +59,16 @@
 	padding: 0 0 0 10px;
 	overflow: hidden;
 	width:92%;
+	font-size: 14px;
 }
 .wpuxss_tpb_settings_list li label span {
 	color: #8e959c;
 	display: inline-block;
+	font-size: 12px;
+}
+.wpuxss_tpb_settings_list li input[type="checkbox"] {
+	vertical-align: top;
+	margin: 3px 0 0;
 }
 
 

@@ -209,7 +209,7 @@ function wpuxss_tpb_print_options()
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_fixed_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_fixed_menu'] ); ?> />
 										<label>
 											<?php _e('Stick main menu','toolbar-publish-button'); ?><br />
-											<span><?php _e('The main admin menu will stay static while you\'re scrolling','toolbar-publish-button'); ?></span>
+											<span><?php _e('The main admin menu will stay static while you\'re scrolling. <br/><b>Note:</b> If you have too many menu items it might be reasonable to turn this option off or switch menu to "Collapse" mode.</b>','toolbar-publish-button'); ?></span>
 										</label>
 									</li>
 									
