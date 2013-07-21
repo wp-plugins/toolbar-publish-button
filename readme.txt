@@ -18,17 +18,19 @@ Too often it turns out very inconvenient to scroll WordPress admin page back and
 
 Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar menu so, that it is staying on the site when you are scrolling your admin page. 
 
+The plugin options also allow to keep scrollbar position after saving and stick admin main menu on its place when you're scrolling the page.
+
 The plugin doesn't affect any native WordPress functionality. It just redirects your click to an original button. The plugin, also, uses current button text, of course with the current language.
 
 
 
 == Installation ==
 
-1. Upload 'toolbar-publish-button' to the '/wp-content/plugins/' directory
+1. Upload plugin folder to the '/wp-content/plugins/' directory
 
-2. Activate the plugin through the 'Plugins' menu in WordPress admin
+2. Activate the plugin through the 'Plugins' menu in the WordPress admin
 
-3. Change "Remember scrollbar position" option on the plugin Options page if you wish
+3. Change settings on Settings -> Toolbar Publish Button if you wish
 
 4. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
 
@@ -49,15 +51,19 @@ There are no questions for now :)
 
 == Changelog ==
 
+= 1.1.3 =
+* "Stick main menu" option added.
+* Minor text correction done.
+
 = 1.1.2 =
-* Inaccurate scrollbar position calculation fixed
-* The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript)
+* Inaccurate scrollbar position calculation fixed.
+* The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript).
 
 = 1.1.1 =
-* Minor improvement of plugin upgrade process
+* Minor improvement of plugin upgrade process.
 
 = 1.1.0 =
-* Remember scrollbar position option added
+* Remember scrollbar position option added.
 
 = 1.0.4 =
 * Script moved to the footer for better site performance.
