@@ -153,7 +153,6 @@ function wpuxss_tpb_admin_menu()
 		__('Toolbar Publish Button Settings','toolbar-publish-button'), //page_title
 		__('Toolbar Publish Button','toolbar-publish-button'), //menu_title
 		'manage_options', //capability
-
 		'toolbar-publish-button-settings', //page
 		'wpuxss_tpb_print_options' //callback
 	);
@@ -201,7 +200,7 @@ function wpuxss_tpb_print_options()
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_scrollbar_return]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_scrollbar_return'] ); ?> />
 										<label>
 											<?php esc_html_e('Remember scrollbar position','toolbar-publish-button'); ?><br />
-											<span><?php esc_html_e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button','toolbar-publish-button'); ?></span>
+											<span><?php esc_html_e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button.','toolbar-publish-button'); ?></span>
 										</label>
 									</li>
 									
