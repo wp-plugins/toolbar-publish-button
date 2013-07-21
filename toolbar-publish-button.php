@@ -153,6 +153,7 @@ function wpuxss_tpb_admin_menu()
 		__('Toolbar Publish Button Settings','toolbar-publish-button'), //page_title
 		__('Toolbar Publish Button','toolbar-publish-button'), //menu_title
 		'manage_options', //capability
+
 		'toolbar-publish-button-settings', //page
 		'wpuxss_tpb_print_options' //callback
 	);
@@ -176,7 +177,7 @@ function wpuxss_tpb_print_options()
     
 	<div id="toolbar-publish-button-settings-wrap" class="wrap">    
 		<?php screen_icon(); ?>
-		<h2><?php _e('Toolbar Publish Button Settings','toolbar-publish-button'); ?></h2>   
+		<h2><?php esc_html_e('Toolbar Publish Button Settings','toolbar-publish-button'); ?></h2>   
         
 		<div id="poststuff">
 		
@@ -189,7 +190,7 @@ function wpuxss_tpb_print_options()
 
 							<?php settings_fields( 'wpuxss_tpb_settings' ); ?>
                             
-							<h3><?php _e('Basic Settings','toolbar-publish-button'); ?></h3>
+							<h3><?php esc_html_e('Basic Settings','toolbar-publish-button'); ?></h3>
                             
 							<div class="inside">
                            
@@ -199,8 +200,8 @@ function wpuxss_tpb_print_options()
 										<?php $options = get_option('wpuxss_tpb_settings'); ?>
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_scrollbar_return]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_scrollbar_return'] ); ?> />
 										<label>
-											<?php _e('Remember scrollbar position','toolbar-publish-button'); ?><br />
-											<span><?php _e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button','toolbar-publish-button'); ?></span>
+											<?php esc_html_e('Remember scrollbar position','toolbar-publish-button'); ?><br />
+											<span><?php esc_html_e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button','toolbar-publish-button'); ?></span>
 										</label>
 									</li>
 									
@@ -208,8 +209,13 @@ function wpuxss_tpb_print_options()
 										<?php $options = get_option('wpuxss_tpb_settings'); ?>
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_fixed_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_fixed_menu'] ); ?> />
 										<label>
-											<?php _e('Stick main menu','toolbar-publish-button'); ?><br />
-											<span><?php _e('The main admin menu will stay static while you\'re scrolling. <br/><b>Note:</b> If you have too many menu items it might be reasonable to turn this option off or switch menu to "Collapse" mode.</b>','toolbar-publish-button'); ?></span>
+											<?php esc_html_e('Stick main menu','toolbar-publish-button'); ?><br />
+											<span>
+												<?php esc_html_e('The main admin menu will stay static while you\'re scrolling.','toolbar-publish-button'); ?> 
+												<br/>
+												<b><?php esc_html_e('Note:','toolbar-publish-button'); ?></b> 
+												<?php esc_html_e('If you have too many menu items it might be reasonable to turn this option off or switch menu to "Collapse" mode.','toolbar-publish-button'); ?>
+											</span>
 										</label>
 									</li>
 									
@@ -258,6 +264,7 @@ function wpuxss_tpb_print_options()
 	</div>
  
 	<?php
+
 }
 
 
