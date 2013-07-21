@@ -3,12 +3,12 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-Get rid of excessive scrolling when saving data on the WordPress backend! A small UX improvement will always keep Publish Button in sight.
+Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will always keep Publish Button and/or Main Admin Menu in sight.
 
 
 
