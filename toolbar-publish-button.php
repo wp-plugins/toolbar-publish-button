@@ -3,7 +3,7 @@
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
 Description: Get rid of excessive scrolling when saving data on the WordPress backend! A small UX improvement will always keep Publish Button in sight.
-Version: 1.1.3
+Version: 1.1.4
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -27,7 +27,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-$wpuxss_tpb_version = "1.1.3";
+$wpuxss_tpb_version = "1.1.4";
 $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 
@@ -209,12 +209,7 @@ function wpuxss_tpb_print_options()
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_fixed_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_fixed_menu'] ); ?> />
 										<label>
 											<?php esc_html_e('Stick main menu','toolbar-publish-button'); ?><br />
-											<span>
-												<?php esc_html_e('The main admin menu will stay static while you\'re scrolling.','toolbar-publish-button'); ?> 
-												<br/>
-												<b><?php esc_html_e('Note:','toolbar-publish-button'); ?></b> 
-												<?php esc_html_e('If you have too many menu items it might be reasonable to turn this option off or switch menu to "Collapse" mode.','toolbar-publish-button'); ?>
-											</span>
+											<span><?php esc_html_e('The main admin menu will stay static while you\'re scrolling if it fits into browser window.','toolbar-publish-button'); ?></span>
 										</label>
 									</li>
 									

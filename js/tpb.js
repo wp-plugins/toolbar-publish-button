@@ -24,6 +24,21 @@
 	$(function(ready)
 	{
 		$('#publish, #submit, .acf-button[type=submit]').duplicateButton();
+		
+		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
+		{
+			menuOuterHeight = $('#adminmenuwrap').height() + $('#wpadminbar').height();
+			windowHeight = $(window).height();
+			
+			if ( windowHeight <= menuOuterHeight )
+			{
+				$('#adminmenuwrap').addClass('fixed_position');
+			}
+			else
+			{
+				$('#adminmenuwrap').removeClass('fixed_position');
+			}
+		}
 
 		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
 		{		

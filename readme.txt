@@ -51,6 +51,9 @@ There are no questions for now :)
 
 == Changelog ==
 
+= 1.1.4 =
+* Main menu fixation mechanism improved to not fix the menu when its height is bigger than browser window height. Thanks MP6 for inspiration.
+
 = 1.1.3 =
 * "Stick main menu" option added.
 * Minor text correction done.
