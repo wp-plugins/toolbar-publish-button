@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-#adminmenuwrap {
+#adminmenuwrap.fixed_position {
 	position: fixed;
 	z-index: 20;
 }

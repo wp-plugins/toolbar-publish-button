@@ -30,7 +30,7 @@
 			menuOuterHeight = $('#adminmenuwrap').height() + $('#wpadminbar').height();
 			windowHeight = $(window).height();
 			
-			if ( windowHeight <= menuOuterHeight )
+			if ( windowHeight >= menuOuterHeight )
 			{
 				$('#adminmenuwrap').addClass('fixed_position');
 			}
