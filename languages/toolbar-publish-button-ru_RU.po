@@ -1,56 +1,65 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tollbar Publish Button\n"
-"POT-Creation-Date: 2013-07-24 21:09+0200\n"
-"PO-Revision-Date: 2013-07-24 21:30+0200\n"
+"POT-Creation-Date: 2013-07-24 23:23+0200\n"
+"PO-Revision-Date: 2013-07-24 23:33+0200\n"
 "Last-Translator: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
 "Language-Team: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
-"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e\n"
 "X-Poedit-Basepath: ./\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../toolbar-publish-button.php:113 ../toolbar-publish-button.php:188
+#: ../toolbar-publish-button.php:115 ../toolbar-publish-button.php:190
 msgid "Basic Settings"
 msgstr "Основные настройки"
 
-#: ../toolbar-publish-button.php:121 ../toolbar-publish-button.php:198
+#: ../toolbar-publish-button.php:123 ../toolbar-publish-button.php:200
 msgid "Remember scrollbar position"
 msgstr "Помнить позицию полосы прокрутки"
 
-#: ../toolbar-publish-button.php:149 ../toolbar-publish-button.php:175
+#: ../toolbar-publish-button.php:151 ../toolbar-publish-button.php:177
 msgid "Toolbar Publish Button Settings"
 msgstr "Настройки Toolbar Publish Button"
 
-#: ../toolbar-publish-button.php:150
+#: ../toolbar-publish-button.php:152
 msgid "Toolbar Publish Button"
-msgstr ""
+msgstr "Toolbar Publish Button"
 
-#: ../toolbar-publish-button.php:199
+#: ../toolbar-publish-button.php:201
 msgid ""
 "It will return admin page scroll bar to the position that preceded the click "
 "of the Save/Update button."
 msgstr ""
-"Страница будет возвращена к той позиции полосы прокрутки, где вы находились "
-"до клика по кнопке \"Сохранить\"/\"Опубликовать\"."
+"Возвратит полосу прокрутки в ту же позицию, которая предшесвовала нажатию "
+"кнопки \"Сохранить\"/\"Обновить\"."
 
-#: ../toolbar-publish-button.php:207
+#: ../toolbar-publish-button.php:209
 msgid "Stick main menu"
 msgstr "Приклеить главное меню"
 
-#: ../toolbar-publish-button.php:208
+#: ../toolbar-publish-button.php:210
 msgid ""
 "Main admin menu will stay static while you're scrolling if it fits into "
 "browser window."
 msgstr ""
-"Главное меню админки будет оставиться неподвижным в то время, как вы "
-"прокручиваете страницу, если оно умещается в окно браузера."
+"Главное меню админки будет оставаться неподвижным, когда вы прокручиваете "
+"страницу, если оно помещается в окно браузера."
 
-#: ../toolbar-publish-button.php:325
+#: ../toolbar-publish-button.php:327
 msgid "Settings"
 msgstr "Настройки"
+
+#: ../toolbar-publish-button.php:5
+msgid ""
+"Get rid of excessive scrolling when saving data on WordPress backend! A "
+"small UX improvement will keep Publish Button and/or Main Admin Menu in "
+"sight."
+msgstr ""
+"Избавьтесь от излишнего прокручивания во время сохранения данных в админке "
+"WordPress! Небольшое улучшение UX позволит вам держать кнопку сохранения и/"
+"или главное меню на виду."
