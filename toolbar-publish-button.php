@@ -3,7 +3,7 @@
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
 Description: Get rid of excessive scrolling when saving data on the WordPress backend! A small UX improvement will always keep Publish Button in sight.
-Version: 1.1.4
+Version: 1.1.5
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -27,7 +27,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 
-$wpuxss_tpb_version = "1.1.4";
+$wpuxss_tpb_version = "1.1.5";
 $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 
@@ -71,7 +71,7 @@ function wpuxss_tpb_admin_scripts()
 		'wb-admin-custom-style', 
 		plugins_url( '/css/admin.css' , __FILE__ ),
 		array(), 
-		'1.1', 
+		$wpuxss_tpb_version, 
 		'all' );
 	wp_enqueue_style( 'wb-admin-custom-style' );
 	
@@ -81,7 +81,7 @@ function wpuxss_tpb_admin_scripts()
 			'wb-admin-fixed-menu-style', 
 			plugins_url( '/css/fixed-admin-menu.css' , __FILE__ ),
 			array(), 
-			'1.1', 
+			$wpuxss_tpb_version, 
 			'all' );
 		wp_enqueue_style( 'wb-admin-fixed-menu-style' );
 	}
@@ -91,7 +91,7 @@ function wpuxss_tpb_admin_scripts()
 		'jquery-cookie',
 		plugins_url( '/js/jquery.cookie.js' , __FILE__ ),
 		array('jquery'),
-		null,
+		$wpuxss_tpb_version,
 		true
 	);
 	
@@ -100,7 +100,7 @@ function wpuxss_tpb_admin_scripts()
 		'toolbar-publish-button-script',
 		plugins_url( '/js/tpb.js' , __FILE__ ),
 		array('jquery','jquery-cookie'),
-		null,
+		$wpuxss_tpb_version,
 		true
 	);
 	

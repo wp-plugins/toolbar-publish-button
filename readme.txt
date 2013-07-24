@@ -51,6 +51,9 @@ There are no questions for now :)
 
 == Changelog ==
 
+= 1.1.5 =
+* Script version mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
+
 = 1.1.4 =
 * Main menu fixation mechanism improved. From now main menu won't be sticked if it doesn't fit into one screen automatically, no need to turn it off manually. Thanks MP6 for inspiration.
 
