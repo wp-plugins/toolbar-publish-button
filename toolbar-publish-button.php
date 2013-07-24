@@ -59,11 +59,7 @@ function wpuxss_tpb_admin_scripts()
 	if( $wpuxss_tpb_version != $wpuxss_tpb_old_version )
 	{
 		update_option('wpuxss_tpb_version', $wpuxss_tpb_version );
-		
-		//if (!$wpuxss_tpb_old_version) 
-		//{
-			wpuxss_tpb_on_activation();
-		//} 
+		wpuxss_tpb_on_activation();
 	}
 	
 	// styles for button
@@ -289,7 +285,7 @@ function wpuxss_tpb_settings_validate($input)
 /**
  *  wpuxss_tpb_on_activation
  *
- *  Set default value for plugin setting during plugin activation
+ *  Set default value for plugin settings during plugin activation
  *
  *  @since    1.1.0
  *  @created  15/07/13
