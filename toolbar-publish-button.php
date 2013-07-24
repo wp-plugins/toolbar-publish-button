@@ -7,6 +7,8 @@ Version: 1.1.5
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
+Text Domain: toolbar-publish-button
+Domain Path: /languages
 
 
 Copyright 2013  WordPress UX Solutions  (email : WordPressUXSolutions@gmail.com)
