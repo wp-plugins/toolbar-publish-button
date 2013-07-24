@@ -46,6 +46,7 @@ msgid "Settings"
 msgstr ""
 
 #: ../toolbar-publish-button.php:5
+#. Plugin Description for admin plugin list
 msgid "Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight."
 msgstr ""
 
