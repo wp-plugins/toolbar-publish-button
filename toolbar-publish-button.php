@@ -60,14 +60,10 @@ function wpuxss_tpb_admin_scripts()
 	{
 		update_option('wpuxss_tpb_version', $wpuxss_tpb_version );
 		
-		if (!$wpuxss_tpb_old_version) 
-		{
+		//if (!$wpuxss_tpb_old_version) 
+		//{
 			wpuxss_tpb_on_activation();
-		} 
-		else if ( $wpuxss_tpb_old_version < '1.1.3' )
-		{
-			wpuxss_tpb_fixed_menu_on_activation();
-		}
+		//} 
 	}
 	
 	// styles for button
@@ -302,31 +298,15 @@ function wpuxss_tpb_settings_validate($input)
 //register_activation_hook(  __FILE__, 'wpuxss_tpb_on_activation' );
 function wpuxss_tpb_on_activation() 
 {
-	$wpuxss_tpb_settings = array(
-		'wpuxss_tpb_scrollbar_return' => 1,
-		'wpuxss_tpb_fixed_menu'        => 1
-	);
-	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
-}
-
-
-/**
- *  wpuxss_tpb_fixed_menu_on_activation
- *
- *  Set default value ONLY for fixed menu option during plugin activation
- *
- *  @since    1.1.5
- *  @created  24/07/13
- */ 
-
-//register_activation_hook(  __FILE__, 'wpuxss_tpb_on_activation' );
-function wpuxss_tpb_fixed_menu_on_activation() 
-{
 	$options = get_option('wpuxss_tpb_settings');
 	
+	$wpuxss_tpb_scrollbar_return = isset($options['wpuxss_tpb_scrollbar_return']) ? $options['wpuxss_tpb_scrollbar_return'] : 1;
+	
+	$wpuxss_tpb_fixed_menu = isset($options['wpuxss_tpb_fixed_menu']) ? $options['wpuxss_tpb_fixed_menu'] : 1;
+	
 	$wpuxss_tpb_settings = array(
-		'wpuxss_tpb_scrollbar_return' => $options['wpuxss_tpb_scrollbar_return'],
-		'wpuxss_tpb_fixed_menu'        => 1
+		'wpuxss_tpb_scrollbar_return'  => $wpuxss_tpb_scrollbar_return,
+		'wpuxss_tpb_fixed_menu'        => $wpuxss_tpb_fixed_menu
 	);
 	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
 }
