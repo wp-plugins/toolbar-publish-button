@@ -1,6 +1,6 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu
+Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky
 Requires at least: 3.3
 Tested up to: 3.5.2
 Stable tag: 1.1.5
