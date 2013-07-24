@@ -322,9 +322,7 @@ function wpuxss_tpb_on_activation()
 //register_activation_hook(  __FILE__, 'wpuxss_tpb_on_activation' );
 function wpuxss_tpb_fixed_menu_on_activation() 
 {
-	$wpuxss_tpb_settings = array(
-		'wpuxss_tpb_fixed_menu'        => 1
-	);
+	$wpuxss_tpb_settings['wpuxss_tpb_fixed_menu'] = 1;
 	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
 }
 
