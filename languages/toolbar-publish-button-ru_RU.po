@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tollbar Publish Button\n"
 "POT-Creation-Date: 2013-07-24 23:23+0200\n"
-"PO-Revision-Date: 2013-07-24 23:33+0200\n"
+"PO-Revision-Date: 2013-07-24 23:53+0200\n"
 "Last-Translator: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
 "Language-Team: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,7 @@ msgstr ""
 msgid "Settings"
 msgstr "Настройки"
 
+#. Plugin Description for admin plugin list
 #: ../toolbar-publish-button.php:5
 msgid ""
 "Get rid of excessive scrolling when saving data on WordPress backend! A "
