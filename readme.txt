@@ -3,7 +3,7 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,7 +52,7 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.5 =
-* Script version mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
+* Script versions mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
 
 = 1.1.4 =
 * Main menu fixation mechanism improved. From now main menu won't be sticked if it doesn't fit into one screen automatically, no need to turn it off manually. Thanks MP6 for inspiration.
