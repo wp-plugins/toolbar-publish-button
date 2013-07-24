@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tollbar Publish Button\n"
-"POT-Creation-Date: 2013-07-23 23:18+0200\n"
-"PO-Revision-Date: 2013-07-23 23:18+0200\n"
+"POT-Creation-Date: 2013-07-24 09:41+0200\n"
+"PO-Revision-Date: 2013-07-24 09:41+0200\n"
 "Last-Translator: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
 "Language-Team: WordPress UX Solutions <WordPressUXSolutions@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../toolbar-publish-button.php:212
 msgid ""
-"The main admin menu will stay static while you're scrolling if it fits into "
+"Main admin menu will stay static while you're scrolling if it fits into "
 "browser window."
 msgstr ""
 

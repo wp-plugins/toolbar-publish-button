@@ -209,7 +209,7 @@ function wpuxss_tpb_print_options()
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_fixed_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_fixed_menu'] ); ?> />
 										<label>
 											<?php esc_html_e('Stick main menu','toolbar-publish-button'); ?><br />
-											<span><?php esc_html_e('The main admin menu will stay static while you\'re scrolling if it fits into browser window.','toolbar-publish-button'); ?></span>
+											<span><?php esc_html_e('Main admin menu will stay static while you\'re scrolling if it fits into browser window.','toolbar-publish-button'); ?></span>
 										</label>
 									</li>
 									
