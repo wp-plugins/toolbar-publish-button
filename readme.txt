@@ -35,6 +35,7 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 4. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
 
 
+
 == Frequently Asked Questions ==
 
 There are no questions for now :)
