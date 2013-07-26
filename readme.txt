@@ -52,37 +52,40 @@ There are no questions for now :)
 
 == Changelog ==
 
+= 1.1.6 =
+* Bugfix: Fixed menu CSS fixed.
+
 = 1.1.5 =
-* Script versions mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
+* Bugfix: Script versions mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
 
 = 1.1.4 =
-* Main menu fixation mechanism improved. From now main menu won't be sticked if it doesn't fit into one screen automatically, no need to turn it off manually. Thanks MP6 for inspiration.
+* Update: Main menu fixation mechanism improved. From now main menu won't be sticked if it doesn't fit into one screen automatically, no need to turn it off manually. Thanks MP6 for inspiration.
 
 = 1.1.3 =
-* "Stick main menu" option added.
-* Minor text correction done.
+* New:    "Stick main menu" option added.
+* Bugfix: Minor text correction done.
 
 = 1.1.2 =
-* Inaccurate scrollbar position calculation fixed.
-* The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript).
+* Bugfix: Inaccurate scrollbar position calculation fixed.
+* New:    The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript).
 
 = 1.1.1 =
-* Minor improvement of plugin upgrade process.
+* Update: Minor improvement of plugin upgrade process.
 
 = 1.1.0 =
-* "Remember scrollbar position" option added.
+* New:    "Remember scrollbar position" option added.
 
 = 1.0.4 =
-* Script moved to the footer for better site performance.
+* Update: Script moved to the footer for better site performance.
 
 = 1.0.3 =
-* Minor improvements.
+* Update: Minor improvements.
 
 = 1.0.2 =
-* ACF plugin Option Page button support added.
+* New:    ACF plugin Option Page button support added.
 
 = 1.0.1 =
-* Minor bugs fixing.
+* Bugfix: Minor bugs fixing.
 
 = 1.0.0 =
-* Toolbar Publish Button.
+* New: Toolbar Publish Button initial release.
