@@ -53,7 +53,8 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.6 =
-* Bugfix: Fixed menu CSS fixed.
+* Bugfix: Fixed menu CSS minor bug fixed.
+* New: Capability to remember a scrollbar position of the plugin list page after Activate/Deactivate button click added. It will work when Remember scrollbar position option is selected.
 
 = 1.1.5 =
 * Bugfix: Script versions mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
