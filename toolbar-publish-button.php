@@ -198,7 +198,11 @@ function wpuxss_tpb_print_options()
 										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_scrollbar_return]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_scrollbar_return'] ); ?> />
 										<label>
 											<?php esc_html_e('Remember scrollbar position','toolbar-publish-button'); ?><br />
-											<span><?php esc_html_e('It will return admin page scroll bar to the position that preceded the click of the Save/Update button.','toolbar-publish-button'); ?></span>
+											<span>
+												<?php esc_html_e('It will return admin page scrollbar to the position that preceded the click of the Save/Update button.','toolbar-publish-button'); ?>
+												<br />
+												<?php esc_html_e('The feature will also work for Plugins page with Activate/Deactivate plugin buttons.','toolbar-publish-button'); ?>
+											</span>
 										</label>
 									</li>
 									

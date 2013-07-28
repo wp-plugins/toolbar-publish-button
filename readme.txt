@@ -53,8 +53,8 @@ There are no questions for now :)
 == Changelog ==
 
 = 1.1.6 =
-* Bugfix: Fixed menu CSS minor bug fixed.
 * New: Capability to remember a scrollbar position of the plugin list page after Activate/Deactivate button click added. It will work when Remember scrollbar position option is selected.
+* Bugfix: Fixed menu CSS minor bug fixed.
 
 = 1.1.5 =
 * Bugfix: Script versions mechanism fixed. Please upgrade the plugin especially in case you can't see the changes from version 1.1.4
@@ -67,8 +67,8 @@ There are no questions for now :)
 * Bugfix: Minor text correction done.
 
 = 1.1.2 =
-* Bugfix: Inaccurate scrollbar position calculation fixed.
 * New:    The plugin admin texts localization mechanism implemented. (Note: Frontend doesn't need to be localized because it uses the current text (and language) of the button via javascript).
+* Bugfix: Inaccurate scrollbar position calculation fixed.
 
 = 1.1.1 =
 * Update: Minor improvement of plugin upgrade process.
