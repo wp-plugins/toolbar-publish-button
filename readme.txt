@@ -52,6 +52,9 @@ There are no questions for now :)
 
 == Changelog ==
 
+= 1.1.7 =
+* Bugfix: More correct mechanism choosing a button for cloning.
+
 = 1.1.6 =
 * New: Capability to remember a scrollbar position of the plugin list page after Activate/Deactivate button click added. It will work when Remember scrollbar position option is selected.
 * Bugfix: Fixed menu CSS minor bug fixed.
