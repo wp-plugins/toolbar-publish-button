@@ -7,6 +7,7 @@ Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+
 Get a copy of Update/Publish/etc. button to the top Toolbar! There is no longer need to scroll admin pages up and down to save posts and settings.
 
 
