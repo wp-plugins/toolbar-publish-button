@@ -7,7 +7,6 @@ Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-
 Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight.
 
 
@@ -54,6 +53,7 @@ There are no questions for now :)
 
 = 1.1.7 =
 * Bugfix: More correct mechanism choosing a button for cloning.
+* Bugfix: From this version main menu fixation works correctly when browser window size is changed after a page had been loaded.
 
 = 1.1.6 =
 * New: Capability to remember a scrollbar position of the plugin list page after Activate/Deactivate button click added. It will work when Remember scrollbar position option is selected.
