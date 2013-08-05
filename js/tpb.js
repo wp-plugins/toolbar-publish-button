@@ -33,9 +33,9 @@
 
 	$(function(ready)
 	{
-		if ( $('input.button-primary, .acf-button#publish').is(':visible') )
+		if ( $('input[type="submit"].button-primary, .acf-button#publish').is(':visible') && !$('input[type="submit"].button-primary').is("#bulk_edit") )
 		{
-			$('input.button-primary, .acf-button#publish').duplicateButton();
+			$('input[type="submit"].button-primary, .acf-button#publish').duplicateButton();
 		}
 		
 		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
@@ -69,8 +69,7 @@
 	});
 	
 	
-	$(window).load(function() 
-	{		
+	$(window).on("load resize",function(e){
 		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
 		{
 			var tempScrollTop = $.cookie("TPBScrollTop");
@@ -91,5 +90,27 @@
 			}
 		}
 	});
+	/*$(window).load(function() 
+	{		
+		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
+		{
+			var tempScrollTop = $.cookie("TPBScrollTop");
+			
+			if (tempScrollTop) 
+			{
+				var prevMessageDiv = parseInt($.cookie("TPBmessageDiv"));
+				var currMessageDiv = parseInt($('div#message').length);		
+			
+				if (!prevMessageDiv && currMessageDiv)
+				{
+					tempScrollTop = parseInt(tempScrollTop) + $('div#message').outerHeight(true);
+				}
+				
+				$(window).scrollTop(tempScrollTop);
+				$.cookie("TPBScrollTop",null);
+				$.cookie("TPBmessageDiv",null);
+			}
+		}
+	});*/
 
 })( jQuery );
