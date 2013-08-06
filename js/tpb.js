@@ -91,27 +91,5 @@
 			}
 		}
 	});
-	/*$(window).load(function() 
-	{		
-		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
-		{
-			var tempScrollTop = $.cookie("TPBScrollTop");
-			
-			if (tempScrollTop) 
-			{
-				var prevMessageDiv = parseInt($.cookie("TPBmessageDiv"));
-				var currMessageDiv = parseInt($('div#message').length);		
-			
-				if (!prevMessageDiv && currMessageDiv)
-				{
-					tempScrollTop = parseInt(tempScrollTop) + $('div#message').outerHeight(true);
-				}
-				
-				$(window).scrollTop(tempScrollTop);
-				$.cookie("TPBScrollTop",null);
-				$.cookie("TPBmessageDiv",null);
-			}
-		}
-	});*/
 
 })( jQuery );
