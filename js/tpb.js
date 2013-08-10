@@ -43,12 +43,12 @@
 		if ( $('input[type="submit"].button-primary, .acf-button#publish').is(':visible') && !$('input[type="submit"].button-primary').is("#bulk_edit") )
 		{
 			$('input[type="submit"].button-primary, .acf-button#publish').duplicateButton();
-			
-			$('input[type="submit"].button-primary, .acf-button#publish, .row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
-			{
-				saveCookie();
-			});
 		}
+		
+		$('input[type="submit"].button-primary, .acf-button#publish, .row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
+		{
+			saveCookie();
+		});
 
 		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
 		{			
