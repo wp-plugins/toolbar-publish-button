@@ -3,10 +3,11 @@
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
 Description: Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight.
-Version: 1.1.6
+Version: 1.1.7
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
+
 Text Domain: toolbar-publish-button
 Domain Path: /languages
 
@@ -30,7 +31,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
 
-$wpuxss_tpb_version = "1.1.6";
+$wpuxss_tpb_version = "1.1.7";
 $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 

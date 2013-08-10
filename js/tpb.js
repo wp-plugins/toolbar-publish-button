@@ -20,19 +20,79 @@
 
 	});
 	
-	function saveScrollTop ()
+	
+	function saveCookie ()
 	{
 		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1)
 		{
-			$.cookie("TPBScrollTop", $(window).scrollTop());
-			$.cookie("TPBmessageDiv", $('div#message').length);
+			$.cookie('TPBScrollTop', $(window).scrollTop());
+			$.cookie('TPBmessageDiv', $('div#message').length);
+			
+			if ( typeof window.safecss_editor !== 'undefined' )
+			{
+				var cursor = window.safecss_editor.selection.getCursor();
+				$.cookie( 'TPBaceCurrentLineNumber', cursor[ 'row' ] );
+				$.cookie( 'TPBaceTopLineNumber', window.safecss_editor.getFirstVisibleRow() );
+			}
 		}
 	}
 
 
 	$(function(ready)
 	{
-		$('#publish, #submit, .acf-button[type=submit]').duplicateButton();
+		if ( $('input[type="submit"].button-primary, .acf-button#publish').is(':visible') && !$('input[type="submit"].button-primary').is("#bulk_edit") )
+		{
+			$('input[type="submit"].button-primary, .acf-button#publish').duplicateButton();
+			
+			$('input[type="submit"].button-primary, .acf-button#publish, .row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
+			{
+				saveCookie();
+			});
+		}
+
+		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
+		{			
+			e.preventDefault();
+			$('#'+$(this).attr('for')).click();
+		});
+	});
+	
+	
+	$(window).on("load resize",function(e)
+	{
+		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
+		{
+			var tempScrollTop = parseInt($.cookie('TPBScrollTop'));
+			
+			if (tempScrollTop) 
+			{
+				var prevMessageDiv = parseInt($.cookie('TPBmessageDiv'));
+				var currMessageDiv = parseInt($('div#message').length);		
+			
+				if (!prevMessageDiv && currMessageDiv)
+				{
+					tempScrollTop = tempScrollTop + $('div#message').outerHeight(true);
+				}
+				
+				$(window).scrollTop(tempScrollTop);
+				$.cookie('TPBScrollTop',null);
+				$.cookie('TPBmessageDiv',null);
+			}
+			
+			setTimeout( function(){
+				var tempCurrentLineNumber = parseInt($.cookie('TPBaceCurrentLineNumber'));
+				var tempTopLineNumber = parseInt($.cookie('TPBaceTopLineNumber'));
+		    
+				if ( tempTopLineNumber && tempCurrentLineNumber && typeof window.safecss_editor !== 'undefined' ) 
+				{ 
+					window.safecss_editor.gotoLine( tempCurrentLineNumber+1 );
+					window.safecss_editor.scrollToLine( tempTopLineNumber+1, false, false, null );
+					$.cookie( 'TPBaceCurrentLineNumber', null );
+					$.cookie( 'TPBaceTopLineNumber', null );
+				}
+			}, 1);
+			
+		}
 		
 		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
 		{
@@ -47,45 +107,7 @@
 			{
 				$('#adminmenuwrap').removeClass('fixed_position');
 			}
-		}
-
-		$('li#wp-admin-bar-wpuxss-toolbar-publish-button a').click(function(e) 
-		{		
-			saveScrollTop();
-			
-			e.preventDefault();
-			$('#'+$(this).attr('for')).click();
-			
-		});	
-		
-		$('.row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
-		{		
-			saveScrollTop();	
-		});		
-	});
-	
-	
-	$(window).load(function() 
-	{		
-		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
-		{
-			var tempScrollTop = $.cookie("TPBScrollTop");
-			
-			if (tempScrollTop) 
-			{
-				var prevMessageDiv = parseInt($.cookie("TPBmessageDiv"));
-				var currMessageDiv = parseInt($('div#message').length);		
-			
-				if (!prevMessageDiv && currMessageDiv)
-				{
-					tempScrollTop = parseInt(tempScrollTop) + $('div#message').outerHeight(true);
-				}
-				
-				$(window).scrollTop(tempScrollTop);
-				$.cookie("TPBScrollTop",null);
-				$.cookie("TPBmessageDiv",null);
-			}
-		}
+		}	
 	});
 
 })( jQuery );
