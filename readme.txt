@@ -47,7 +47,7 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 == Changelog ==
 
 = 1.2.0 =
-* Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it's not fit browser window height. Just try it :)
+* Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it doesn't fit browser window height. Just try it :)
 * Update: Minor js code improvements.
 
 = 1.1.7 =
