@@ -3,9 +3,10 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.1.7
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 
 Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight.
 
@@ -35,12 +36,6 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 
 
-== Frequently Asked Questions ==
-
-There are no questions for now :)
-
-
-
 == Screenshots ==
 
 1. Toolbar Publish Button Options Page
@@ -50,6 +45,10 @@ There are no questions for now :)
 
 
 == Changelog ==
+
+= 1.2.0 =
+* Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it's not fit browser window height. Just try it :)
+* Update: Minor js code improvements.
 
 = 1.1.7 =
 * New:    "Remembers" scrollbar position for Jetpack custom CSS editor.
@@ -95,3 +94,8 @@ There are no questions for now :)
 
 = 1.0.0 =
 * New:    Toolbar Publish Button initial release.
+
+
+
+== TO DO ==
+* Full compatibility with MP6

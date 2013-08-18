@@ -6,13 +6,7 @@
 		{
 			if ( $(this).length ) 
 			{
-				if ( $(this).is('.acf-button[type=submit]') && !$(this).attr('id') )
-				{
-					$(this).attr('id','acf_publish');
-				}
-				
 				$('li#wp-admin-bar-new-content').after('<li id="wp-admin-bar-wpuxss-toolbar-publish-button"><a class="ab-item" rel="" href="#" id="top-toolbar-submit" for="' + $(this).attr('id') + '"><span class="ab-icon"></span>' + $(this).val() + '</a></li>');
-
 				return true;
 			}
 			return false;
@@ -36,16 +30,20 @@
 			}
 		}
 	}
-
+	
 
 	$(function(ready)
 	{
-		if ( $('input[type="submit"].button-primary, .acf-button#publish').is(':visible') && !$('input[type="submit"].button-primary').is("#bulk_edit") )
+		var button = $('input[type="submit"].button-primary, input[type="button"].button-primary, input[type="submit"].acf-button');
+		
+		if ( button.is(':visible') && !button.is("#bulk_edit") ) 
 		{
-			$('input[type="submit"].button-primary, .acf-button#publish').duplicateButton();
+			if ( !button.attr('id') )
+				button.first().attr('id','tpb_publish');
+			button.first().duplicateButton();
 		}
 		
-		$('input[type="submit"].button-primary, .acf-button#publish, .row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
+		button.add('.row-actions-visible .activate a, .row-actions-visible .deactivate a').click(function(e) 
 		{
 			saveCookie();
 		});
@@ -55,31 +53,76 @@
 			e.preventDefault();
 			$('#'+$(this).attr('for')).click();
 		});
+		
 	});
 	
 	
-	$(window).on("load resize",function(e)
+	window.lastScrollTop = 0;
+	$(window).on('scroll',function(e)
 	{
-		if (wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1) 
+		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
 		{
-			var tempScrollTop = parseInt($.cookie('TPBScrollTop'));
+			var menu = $('#adminmenuwrap');
+			var toolbarHeight = $('#wpadminbar').height();
+			var menuHeight = menu.height() + toolbarHeight;
+			var windowHeight = $(this).height();
+			var scrollHeight = $(document).height();
 			
-			if (tempScrollTop) 
+			if ( menuHeight < windowHeight )
+				menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight });
+			else
 			{
-				var prevMessageDiv = parseInt($.cookie('TPBmessageDiv'));
-				var currMessageDiv = parseInt($('div#message').length);		
-			
-				if (!prevMessageDiv && currMessageDiv)
+				var delta1 = menuHeight - windowHeight;
+				var delta2 = scrollHeight - menuHeight;
+				
+				if ( $(this).scrollTop() > window.lastScrollTop )
 				{
-					tempScrollTop = tempScrollTop + $('div#message').outerHeight(true);
+					if ( $(this).scrollTop() > delta1 )
+						menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight - delta1 });
+					else
+						menu.css({'position':'absolute', 'top':'auto'});
+				}
+				else
+				{				
+					if ( $(this).scrollTop() < delta2 )
+						menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight });
+					else
+						menu.css({'position':'absolute', 'top': delta2 });
+				}
+				window.lastScrollTop = $(this).scrollTop();
+			}
+		}
+	});
+	
+	
+	$(window).on('load',function(e)
+	{
+		if ( wpuxss_tpb_settings.wpuxss_tpb_scrollbar_return == 1 ) 
+		{
+			var n = $('.acf_wysiwyg').length;
+
+			setTimeout( function()
+			{				
+				var tempScrollTop = parseInt($.cookie('TPBScrollTop'));
+				
+				if (tempScrollTop) 
+				{
+					var prevMessageDiv = parseInt($.cookie('TPBmessageDiv'));
+					var currMessageDiv = parseInt($('div#message').length);		
+				
+					if (!prevMessageDiv && currMessageDiv)
+						tempScrollTop = tempScrollTop + $('div#message').outerHeight(true);
+					
+					$(window).scrollTop(tempScrollTop);
+					$.cookie('TPBScrollTop',null);
+					$.cookie('TPBmessageDiv',null);
 				}
 				
-				$(window).scrollTop(tempScrollTop);
-				$.cookie('TPBScrollTop',null);
-				$.cookie('TPBmessageDiv',null);
-			}
+			}, 15*n);
 			
-			setTimeout( function(){
+			
+			setTimeout( function()
+			{
 				var tempCurrentLineNumber = parseInt($.cookie('TPBaceCurrentLineNumber'));
 				var tempTopLineNumber = parseInt($.cookie('TPBaceTopLineNumber'));
 		    
@@ -90,24 +133,10 @@
 					$.cookie( 'TPBaceCurrentLineNumber', null );
 					$.cookie( 'TPBaceTopLineNumber', null );
 				}
+				
 			}, 1);
 			
 		}
-		
-		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
-		{
-			menuOuterHeight = $('#adminmenuwrap').height() + $('#wpadminbar').height();
-			windowHeight = $(window).height();
-			
-			if ( windowHeight >= menuOuterHeight )
-			{
-				$('#adminmenuwrap').addClass('fixed_position');
-			}
-			else
-			{
-				$('#adminmenuwrap').removeClass('fixed_position');
-			}
-		}	
 	});
 
 })( jQuery );

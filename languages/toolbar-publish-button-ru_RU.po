@@ -47,16 +47,15 @@ msgstr ""
 "\"Активировать\"/\"Деактивировать\" плагин."
 
 #: toolbar-publish-button.php:213
-msgid "Stick main menu"
+msgid "Sticky main admin menu"
 msgstr "Приклеить главное меню"
 
 #: toolbar-publish-button.php:214
 msgid ""
-"Main admin menu will stay static while you're scrolling if it fits into "
-"browser window."
+"Main admin menu will stay in place when you are scrolling a page."
 msgstr ""
 "Главное меню админки будет оставаться неподвижным, когда вы прокручиваете "
-"страницу, если оно помещается в окно браузера."
+"страницу."
 
 #: toolbar-publish-button.php:331
 msgid "Settings"
@@ -68,6 +67,6 @@ msgid ""
 "small UX improvement will keep Publish Button and/or Main Admin Menu in "
 "sight."
 msgstr ""
-"Избавьтесь от излишнего прокручивания во время сохранения данных в админке "
+"Избавьтесь от лишней прокрутки во время сохранения данных в админке "
 "WordPress! Небольшое улучшение UX позволит вам держать кнопку сохранения и/"
 "или главное меню на виду."

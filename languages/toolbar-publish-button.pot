@@ -42,13 +42,12 @@ msgid ""
 msgstr ""
 
 #: toolbar-publish-button.php:213
-msgid "Stick main menu"
+msgid "Sticky main admin menu"
 msgstr ""
 
 #: toolbar-publish-button.php:214
 msgid ""
-"Main admin menu will stay static while you're scrolling if it fits into "
-"browser window."
+"Main admin menu will stay in place when you are scrolling a page."
 msgstr ""
 
 #: toolbar-publish-button.php:331
