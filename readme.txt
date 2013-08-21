@@ -47,7 +47,7 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 == Changelog ==
 
 = 1.2.1 =
-* Bugfix: Sticky menu incorrect scrolling mechanism fixed.
+* Bugfix: Sticky menu incorrect scrolling mechanism fixed. No jitter effect during scrolling anymore.
 
 = 1.2.0 =
 * Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it doesn't fit into browser window height. Just try it :)
