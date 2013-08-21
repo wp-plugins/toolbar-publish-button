@@ -3,7 +3,7 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 
 == Changelog ==
+
+= 1.2.1 =
+* Bugfix: Sticky menu incorrect scrolling mechanism fixed. No jitter effect during scrolling anymore.
 
 = 1.2.0 =
 * Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it doesn't fit into browser window height. Just try it :)

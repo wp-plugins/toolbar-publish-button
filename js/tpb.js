@@ -11,7 +11,7 @@
 			}
 			return false;
 		}
-
+		
 	});
 	
 	
@@ -53,11 +53,11 @@
 			e.preventDefault();
 			$('#'+$(this).attr('for')).click();
 		});
-		
 	});
 	
 	
 	window.lastScrollTop = 0;
+	window.lastMenuTop = 0;
 	$(window).on('scroll',function(e)
 	{
 		if (wpuxss_tpb_settings.wpuxss_tpb_fixed_menu == 1)
@@ -67,27 +67,36 @@
 			var menuHeight = menu.height() + toolbarHeight;
 			var windowHeight = $(this).height();
 			var scrollHeight = $(document).height();
+			var delta = menuHeight - windowHeight;
+			
+			menu.css({'z-index':20});
 			
 			if ( menuHeight < windowHeight )
-				menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight });
+				menu.css({ 'position':'fixed', 'top': toolbarHeight });
 			else
 			{
-				var delta1 = menuHeight - windowHeight;
-				var delta2 = scrollHeight - menuHeight;
-				
 				if ( $(this).scrollTop() > window.lastScrollTop )
 				{
-					if ( $(this).scrollTop() > delta1 )
-						menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight - delta1 });
+					if ( $(this).scrollTop() > delta )
+						menu.css({ 'position':'fixed', 'top': toolbarHeight - delta });
 					else
-						menu.css({'position':'absolute', 'top':'auto'});
+						menu.css({ 'position':'absolute', 'top': 0 });
+						
+					window.lastMenuTop = $(this).scrollTop() + windowHeight - menuHeight;
 				}
-				else
-				{				
-					if ( $(this).scrollTop() < delta2 )
-						menu.css({'position':'fixed', 'z-index':20, 'top': toolbarHeight });
-					else
-						menu.css({'position':'absolute', 'top': delta2 });
+				if ( $(this).scrollTop() < window.lastScrollTop )
+				{	
+					if (window.lastMenuTop > 0)
+					{		
+						if ( $(this).scrollTop() < window.lastMenuTop )
+							menu.css({ 'position': 'fixed', 'top': toolbarHeight });
+						else
+							menu.css({ 'position':'absolute', 'top': window.lastMenuTop });
+					}
+					else 
+					{
+						menu.css({ 'position':'absolute', 'top': 0 });
+					}
 				}
 				window.lastScrollTop = $(this).scrollTop();
 			}
@@ -135,7 +144,6 @@
 				}
 				
 			}, 1);
-			
 		}
 	});
 
