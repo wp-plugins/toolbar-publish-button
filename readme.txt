@@ -97,8 +97,3 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 = 1.0.0 =
 * New:    Toolbar Publish Button initial release.
-
-
-
-== TO DO ==
-* Full compatibility with MP6
