@@ -8,6 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
+
 Get rid of excessive scrolling when saving data! A small UX improvement will always keep Publish Button and Main Admin Menu within reach.
 
 
@@ -101,8 +102,3 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 = 1.0.0 =
 * New:    Toolbar Publish Button initial release.
-
-
-
-== TO DO ==
-* Full compatibility with MP6
