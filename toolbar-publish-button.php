@@ -321,7 +321,7 @@ function wpuxss_tpb_on_activation()
 	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );
 	
 	if ( isset($options['wpuxss_tpb_fixed_menu']) ) 
-		delete_option( $options['wpuxss_tpb_fixed_menu'] );	
+		delete_option( 'wpuxss_tpb_fixed_menu' );
 }
 
 
