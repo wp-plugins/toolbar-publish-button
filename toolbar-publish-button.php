@@ -2,8 +2,8 @@
 /*
 Plugin Name: Toolbar Publish Button
 Plugin URI: http://wordpressuxsolutions.com
-Description: Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight.
-Version: 1.2.1
+Description: Get rid of excessive scrolling when saving data! A small UX improvement will always keep Publish Button and Main Admin Menu within reach.
+Version: 1.2.2
 Author: WordPress UX Solutions
 Author URI: http://wordpressuxsolutions.com
 License: GPLv2 or later
@@ -31,7 +31,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 
 
-$wpuxss_tpb_version = "1.2.1";
+$wpuxss_tpb_version = "1.2.2";
 $wpuxss_tpb_old_version = get_option('wpuxss_tpb_version', false);
 
 
@@ -55,8 +55,6 @@ load_plugin_textdomain('toolbar-publish-button', false, basename( dirname( __FIL
 add_action( 'admin_init', 'wpuxss_tpb_admin_scripts' );
 function wpuxss_tpb_admin_scripts() 
 {	
-	$options = get_option('wpuxss_tpb_settings');
-
 	// update actions
 	global $wpuxss_tpb_version, $wpuxss_tpb_old_version;
 
@@ -65,6 +63,8 @@ function wpuxss_tpb_admin_scripts()
 		update_option('wpuxss_tpb_version', $wpuxss_tpb_version );
 		wpuxss_tpb_on_activation();
 	}
+	
+	$options = get_option('wpuxss_tpb_settings');
 	
 	// styles for button
 	wp_register_style( 
@@ -75,23 +75,47 @@ function wpuxss_tpb_admin_scripts()
 		'all' );
 	wp_enqueue_style( 'wb-admin-custom-style' );
 	
-	// jquery cookie to save scroll bar position
+	// plugin scripts
 	wp_enqueue_script(
-		'jquery-cookie',
-		plugins_url( '/js/jquery.cookie.js' , __FILE__ ),
+		'tpb-script',
+		plugins_url( '/js/tpb.js' , __FILE__ ),
 		array('jquery'),
 		$wpuxss_tpb_version,
 		true
 	);
 	
-	// plugin script
-	wp_enqueue_script(
-		'toolbar-publish-button-script',
-		plugins_url( '/js/tpb.js' , __FILE__ ),
-		array('jquery','jquery-cookie'),
-		$wpuxss_tpb_version,
-		true
-	);
+	if ($options['wpuxss_tpb_scrollbar_return'] || $options['wpuxss_tpb_sticky_menu'])
+	{
+		wp_enqueue_script(
+			'jquery-cookie',
+			plugins_url( '/js/jquery.cookie.js' , __FILE__ ),
+			array('jquery'),
+			$wpuxss_tpb_version,
+			true
+		);
+	}
+	
+	if ($options['wpuxss_tpb_scrollbar_return'])
+	{
+		wp_enqueue_script(
+			'tpb-scrollbar',
+			plugins_url( '/js/tpb.scrollbar.js' , __FILE__ ),
+			array('jquery'),
+			$wpuxss_tpb_version,
+			true
+		);
+	}
+	
+	if ($options['wpuxss_tpb_sticky_menu'])
+	{
+		wp_enqueue_script(
+			'tpb-stickymenu',
+			plugins_url( '/js/tpb.stickymenu.js' , __FILE__ ),
+			array('jquery'),
+			$wpuxss_tpb_version,
+			true
+		);
+	}
 	
 	// register wp plugin settings
 	register_setting( 
@@ -116,13 +140,6 @@ function wpuxss_tpb_admin_scripts()
 		'toolbar-publish-button-settings', //page
 		'wpuxss_tpb_main_section' //section			
 	);
-	
-	// variable wpuxss_tpb_settings to pass plugin settings to jquery
-	wp_localize_script( 
-		'toolbar-publish-button-script', 
-		'wpuxss_tpb_settings', 
-		$options 
-	);		
 }
 
 
@@ -199,7 +216,7 @@ function wpuxss_tpb_print_options()
 									
 									<li>
 										<?php $options = get_option('wpuxss_tpb_settings'); ?>
-										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_fixed_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_fixed_menu'] ); ?> />
+										<input id="wpuxss_tpb_scrollbar_return" name="wpuxss_tpb_settings[wpuxss_tpb_sticky_menu]" type="checkbox" value="1" <?php checked( '1', $options['wpuxss_tpb_sticky_menu'] ); ?> />
 										<label>
 											<?php esc_html_e('Sticky main admin menu','toolbar-publish-button'); ?><br />
 											<span><?php esc_html_e('Main admin menu will stay in place when you are scrolling a page.','toolbar-publish-button'); ?></span>
@@ -270,10 +287,10 @@ function wpuxss_tpb_settings_validate($input)
 	else
 		$input['wpuxss_tpb_scrollbar_return'] = 0;
 	
-	if(isset($input['wpuxss_tpb_fixed_menu']))
-		$input['wpuxss_tpb_fixed_menu'] = 1;
+	if(isset($input['wpuxss_tpb_sticky_menu']))
+		$input['wpuxss_tpb_sticky_menu'] = 1;
 	else
-		$input['wpuxss_tpb_fixed_menu'] = 0;
+		$input['wpuxss_tpb_sticky_menu'] = 0;
 		
 	return $input;
 }
@@ -295,13 +312,16 @@ function wpuxss_tpb_on_activation()
 	
 	$wpuxss_tpb_scrollbar_return = isset($options['wpuxss_tpb_scrollbar_return']) ? $options['wpuxss_tpb_scrollbar_return'] : 1;
 	
-	$wpuxss_tpb_fixed_menu = isset($options['wpuxss_tpb_fixed_menu']) ? $options['wpuxss_tpb_fixed_menu'] : 1;
+	$wpuxss_tpb_sticky_menu = isset($options['wpuxss_tpb_sticky_menu']) ? $options['wpuxss_tpb_sticky_menu'] : 1;
 	
 	$wpuxss_tpb_settings = array(
 		'wpuxss_tpb_scrollbar_return'  => $wpuxss_tpb_scrollbar_return,
-		'wpuxss_tpb_fixed_menu'        => $wpuxss_tpb_fixed_menu
+		'wpuxss_tpb_sticky_menu'        => $wpuxss_tpb_sticky_menu
 	);
-	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );	
+	update_option( 'wpuxss_tpb_settings', $wpuxss_tpb_settings );
+	
+	if ( isset($options['wpuxss_tpb_fixed_menu']) ) 
+		delete_option( $options['wpuxss_tpb_fixed_menu'] );	
 }
 
 

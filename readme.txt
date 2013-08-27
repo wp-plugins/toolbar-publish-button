@@ -1,14 +1,14 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
-Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, user profile, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky
+Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky menu
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
-Get rid of excessive scrolling when saving data on WordPress backend! A small UX improvement will keep Publish Button and/or Main Admin Menu in sight.
+Get rid of excessive scrolling when saving data! A small UX improvement will always keep Publish Button and Main Admin Menu within reach.
 
 
 
@@ -16,11 +16,11 @@ Get rid of excessive scrolling when saving data on WordPress backend! A small UX
 
 Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button to save latest changes. 
 
-Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar menu so, that it is staying on site when you are scrolling your admin page. 
+Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar, so it will stay on site when you are scrolling your admin page. 
 
-The plugin options allow to keep scrollbar position after saving and stick admin main menu on its place when you're scrolling the page.
+The plugin options allow to keep scrollbar position after saving and stick main admin menu to its place when you're scrolling the page. A unique solution allows you to have your admin menu sticky even in case it doesn't fit into screen.
 
-The plugin doesn't affect any native WordPress functionality. It just redirects your click to an original button. The plugin, also, uses current button text, of course with the current language.
+The plugin doesn't affect any native WordPress functionality. It just redirects your click to the original button. The plugin, also, uses current button text, of course with the current language.
 
 
 
@@ -32,7 +32,7 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 3. Change settings on Settings -> Toolbar Publish Button if you wish
 
-4. Enjoy the clone of the Update / Publish button on the Toolbar when editing posts, pages and custom post types.
+4. Enjoy the clone of the Update / Publish button on the admin top toolbar when editing posts, pages and custom post types.
 
 
 
@@ -40,14 +40,18 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 1. Toolbar Publish Button Options Page
 
-2. When the Publish Button can be helpful
+2. How can the Publish Button be helpful
 
 
 
 == Changelog ==
 
+= 1.2.2 =
+* Update: Sticky menu behavior improved, minor bugs fixed.
+* Update: JS code is totally reconsidered for better performance.
+
 = 1.2.1 =
-* Bugfix: Sticky menu incorrect scrolling mechanism fixed. No jitter effect during scrolling anymore.
+* Bugfix: Sticky menu incorrect scrolling mechanism fixed.
 
 = 1.2.0 =
 * Update: Huge sticky admin menu behavior improvement: menu is scrollable only within its own height if it doesn't fit into browser window height. Just try it :)
@@ -70,7 +74,7 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 * Update: Main menu fixation mechanism improved. From now main menu won't be sticked if it doesn't fit into one screen automatically, no need to turn it off manually. Thanks MP6 for inspiration.
 
 = 1.1.3 =
-* New:    "Stick main menu" option added.
+* New:    "Sticky main menu" option added.
 * Bugfix: Minor text correction done.
 
 = 1.1.2 =
