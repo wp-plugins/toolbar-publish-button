@@ -60,6 +60,9 @@
 				window.menuWidth = parseInt($('#adminmenuwrap').width()) + 10;
 				
 			$('#adminmenusuperwrap').width( window.menuWidth );
+			
+			if ( $('#adminmenuwrap').height() > $(document).height() )
+				$('#wpcontent').height($('#adminmenuwrap').height());
 		});
 	});
 	
