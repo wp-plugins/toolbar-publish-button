@@ -25,31 +25,40 @@
 		window.menuScrollTop = 0;
 		window.prevMenuScrollTop = $.cookie( 'TPBmenuScrollTop' ) || 0;
 		
-		window.menuWidth;
-		
 		if ( $('body.mp6').length )
-			window.menuWidth = parseInt($('#adminmenuwrap').width());
-		else 
-			window.menuWidth = parseInt($('#adminmenuwrap').width()) + 10;
+				window.menuWidth = parseInt($('#adminmenuwrap').width());
+			else 
+				window.menuWidth = parseInt($('#adminmenuwrap').width()) + 10;
 			
 		$('#adminmenusuperwrap').css({
-				'position' : 'fixed',
-				'z-index' : 20,
-				'top' : $('#wpadminbar').height(),
-				'height' : $(window).height() - $('#wpadminbar').height(),
-				'width' : window.menuWidth,
-				'overflow' : 'hidden'
-			});
-		
+			'position' : 'fixed',
+			'z-index' : 20,
+			'top' : $('#wpadminbar').height(),
+			'height' : $(window).height() - $('#wpadminbar').height(),
+			'width' : window.menuWidth,
+			'overflow' : 'hidden'
+		});
 		
 		$('#wpcontent').css({'z-index' : 10});
 		$('#wpadminbar').prependTo('#wpwrap');
 		
-		$(document).on("mouseenter", "#adminmenuwrap", function(event){
-			$('#adminmenusuperwrap').width( window.menuWidth + parseInt($('.wp-submenu.wp-submenu-wrap', this).width()) + 10 );
+		$(document).on("mouseover", "#adminmenuwrap", function(e)
+		{				
+			$('#adminmenusuperwrap').width( window.menuWidth + parseInt($('.wp-submenu.wp-submenu-wrap').width()) + 10 );
 		});
 	
-		$(document).on("mouseleave", "#adminmenuwrap", function(event){
+		$(document).on("mouseleave", "#adminmenuwrap", function(e)
+		{
+			$('#adminmenusuperwrap').width( window.menuWidth );
+		});
+		
+		$('#collapse-menu').click(function(e)
+		{
+			if ( $('body.mp6').length )
+				window.menuWidth = parseInt($('#adminmenuwrap').width());
+			else 
+				window.menuWidth = parseInt($('#adminmenuwrap').width()) + 10;
+				
 			$('#adminmenusuperwrap').width( window.menuWidth );
 		});
 	});
