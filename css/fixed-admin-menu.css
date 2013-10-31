@@ -1,8 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-
-
-#adminmenuwrap.fixed_position {
-	position: fixed;
-	z-index: 20;
-}
