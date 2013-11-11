@@ -50,7 +50,7 @@
 		$(document).on('mouseleave', '#adminmenuwrap', function(e)
 		{
 			// compatibility with http://wordpress.org/plugins/admin-menu-tree-page-view/
-			if ( ! $('.amtpv-editpopup' ).length || ! $('.amtpv-editpopup-hover' ).length )
+			if ( ! $('.amtpv-editpopup-hover' ).length )
 			{
 				$('#adminmenusuperwrap').width( window.menuWidth );
 			}
