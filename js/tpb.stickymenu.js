@@ -49,7 +49,9 @@
 	
 		$(document).on('mouseleave', '#adminmenuwrap', function(e)
 		{
-			$('#adminmenusuperwrap').width( window.menuWidth );
+			// compatibility with http://wordpress.org/plugins/admin-menu-tree-page-view/
+			if ( ! $('.amtpv-editpopup' ).lenght || ($('.amtpv-editpopup' ).lenght && $('.amtpv-editpopup' ).css('display') === 'none') )
+				$('#adminmenusuperwrap').width( window.menuWidth );
 		});		
 		
 		$('#collapse-menu').click(function(e)
