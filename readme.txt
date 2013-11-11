@@ -3,7 +3,7 @@ Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky menu
 Requires at least: 3.3
 Tested up to: 3.7.1
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,10 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 
 == Changelog ==
+
+= 1.2.5 =
+* Update: Compatibility with other admin menu plugins improved: [Support Request](http://wordpress.org/support/topic/plugin-conflict-30).
+* Bugfix: Small javascript uploade bug fixed.
 
 = 1.2.4 =
 * Update: Minor scripts' improvements.
