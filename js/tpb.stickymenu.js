@@ -50,8 +50,17 @@
 		$(document).on('mouseleave', '#adminmenuwrap', function(e)
 		{
 			// compatibility with http://wordpress.org/plugins/admin-menu-tree-page-view/
-			if ( ! $('.amtpv-editpopup' ).lenght || ($('.amtpv-editpopup' ).lenght && $('.amtpv-editpopup' ).css('display') === 'none') )
+			if ( ! $('.amtpv-editpopup' ).length || ! $('.amtpv-editpopup-hover' ).length )
+			{
 				$('#adminmenusuperwrap').width( window.menuWidth );
+			}
+		});
+		
+		// compatibility with http://wordpress.org/plugins/admin-menu-tree-page-view/
+		$(document).on('click', '.amtpv-editpopup-addpages-cancel', function(e)
+		{
+			$('.amtpv-editpopup' ).removeClass('amtpv-editpopup-hover');
+			$('#adminmenuwrap').mouseleave();
 		});		
 		
 		$('#collapse-menu').click(function(e)
