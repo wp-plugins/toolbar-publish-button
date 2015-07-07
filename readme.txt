@@ -1,15 +1,15 @@
 === Toolbar Publish Button ===
 Contributors: webbistro
 Tags: ux, user experience, wp-admin, admin, publish, toolbar, save, button, update, post, page, settings, scrollbar, scrolling, admin bar, backend, admin menu, sticky menu
-Requires at least: 3.3
-Tested up to: 3.7.1
-Stable tag: 1.2.5
+Requires at least: 3.8
+Tested up to: 4.2.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-Save a lot of your time by scrolling less in WP admin! A small UX improvement will always keep Publish Button and Main Admin Menu within reach.
+Save a lot of your time by scrolling less in WP admin! A small UX improvement will keep Publish Button within reach and return the scrollbar to its position after saving.
 
 
 
@@ -17,9 +17,7 @@ Save a lot of your time by scrolling less in WP admin! A small UX improvement wi
 
 Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button to save latest changes. 
 
-Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar, so it will stay on site when you are scrolling your admin page. 
-
-The plugin options allow to keep scrollbar position after saving and stick main admin menu to its place when you're scrolling the page. A unique solution allows you to have your admin menu sticky even in case it doesn't fit into screen.
+Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar, so it will stay on site when you are scrolling your admin page. The plugin options allow to keep scrollbar position after saving.
 
 The plugin doesn't affect any native WordPress functionality. It just redirects your click to the original button. The plugin, also, uses current button text, of course with the current language.
 
@@ -46,6 +44,10 @@ The plugin doesn't affect any native WordPress functionality. It just redirects 
 
 
 == Changelog ==
+
+= 1.3 =
+* Update: Wordpress 4.2.2 compatibility ensured.
+* Bugfix: Small bugs from the [Support Forum](https://wordpress.org/support/plugin/toolbar-publish-button) fixed.
 
 = 1.2.5 =
 * Update: Compatibility with other admin menu plugins improved: [Support Request](http://wordpress.org/support/topic/plugin-conflict-30).
