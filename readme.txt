@@ -9,11 +9,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-Save a lot of your time by scrolling less in WP admin! A small UX improvement will keep Publish Button within reach and return the scrollbar to its position after saving.
+Save a lot of your time by scrolling less in WP admin! 
 
 
 
 == Description ==
+
+A small UX improvement will keep Publish Button within reach and return the scrollbar to its position after saving.
 
 Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button to save latest changes. 
 
