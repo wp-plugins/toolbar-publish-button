@@ -17,11 +17,11 @@ Save a lot of your time by scrolling less in WP admin!
 
 A small UX improvement will keep Publish button within reach and retain the scrollbar position after saving in WordPress admin.
 
-Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button to save latest changes. 
+Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for the big blue button to save latest changes.
 
-Simple jQuery script of this plugin will duplicate Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar, so it will stay on site when you are scrolling your admin page. The plugin options allow to keep scrollbar position after saving.
+Simple jQuery script of this plugin duplicates Update / Publish / Save Changes / etc. button for posts, pages, custom posts, taxonomies, user profiles and settings to the top WordPress admin bar, so that it stays on site while you are scrolling your admin page. The plugin options allow to keep the scrollbar position after saving.
 
-The plugin doesn't affect any native WordPress functionality. It just redirects your click to the original button. The plugin, also, uses current button text, of course with the current language.
+The plugin doesn't affect any native WordPress functionality. It just redirects your click to the original button. The plugin uses the current button text, of course, with the current language.
 
 
 
