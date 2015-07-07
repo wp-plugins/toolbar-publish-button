@@ -15,7 +15,7 @@ Save a lot of your time by scrolling less in WP admin!
 
 == Description ==
 
-A small UX improvement will keep Publish Button within reach and return the scrollbar to its position after saving.
+A small UX improvement will keep Publish button within reach and retain the scrollbar position after saving in WordPress admin.
 
 Too often it turns out very inconvenient to scroll WordPress admin page back and forth in the quest for a big blue button to save latest changes. 
 
